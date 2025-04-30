@@ -13,4 +13,7 @@ echo "Starting backend server..."
 cd backend
 source venv/bin/activate
 pip install -r requirements.txt
+
+# バックエンドのポートが8000の場合、DynamoDBのポートと競合する可能性があるので
+# DynamoDBのポートは8002に変更済み（docker-compose.ymlとconfig.envで設定）
 python -m uvicorn main:app --reload --host 0.0.0.0 --port 8000 

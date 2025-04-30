@@ -53,6 +53,15 @@
   cursor: not-allowed;
 }
 
+.error-message {
+  background-color: #e74c3c;
+  color: white;
+  padding: 10px;
+  margin: 0;
+  text-align: center;
+  font-size: 14px;
+}
+
 .App-link {
   color: #61dafb;
 }

@@ -1,0 +1,9 @@
+{
+  "name": "chatbot-backend",
+  "version": "1.0.0",
+  "description": "Chatbot Backend with DynamoDB",
+  "scripts": {
+    "start": "python -m uvicorn main:app --reload --host 0.0.0.0 --port 8000",
+    "test": "./run_tests.sh"
+  }
+} 

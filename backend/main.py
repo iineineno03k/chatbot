@@ -75,4 +75,7 @@ def create_new_chat():
 
 if __name__ == "__main__":
     import uvicorn
+    # 注意: 開発環境では以下の方法でも動作しますが、
+    # 本番環境ではコマンドラインから実行することを推奨します:
+    # python -m uvicorn main:app --host 0.0.0.0 --port 8000
     uvicorn.run(app, host="0.0.0.0", port=8000) 

@@ -1,7 +1,7 @@
 import os
 import boto3
 import uuid
-from datetime import datetime
+from datetime import datetime, UTC
 from typing import List, Dict, Optional
 import logging
 
@@ -62,7 +62,7 @@ class DynamoDBRepository:
     
     def save_message(self, conversation_id: str, role: str, content: str) -> Dict:
         """メッセージをDynamoDBに保存する"""
-        timestamp = datetime.utcnow().isoformat()
+        timestamp = datetime.now(UTC).isoformat()
         message_id = str(uuid.uuid4())
         
         item = {
